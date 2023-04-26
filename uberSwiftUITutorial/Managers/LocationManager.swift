@@ -23,7 +23,6 @@ class LocationManager:NSObject,ObservableObject {
 extension LocationManager:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard  !locations.isEmpty else {return}
-        print(locations.first)
         locationManager.stopUpdatingLocation()
     }
     
