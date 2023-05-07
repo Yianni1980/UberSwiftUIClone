@@ -33,10 +33,12 @@ struct UberMapViewRepresentable:UIViewRepresentable {
            break
         case .locationSelected:
             if let coordinate  = locationViewModel.selectedLocationCoordinate {
+                print("DEBUG:Coordinate is \(coordinate)")
                 context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
-                break
+                
             }
+            break
         case .searchingForLocation:
               break
         }
@@ -92,14 +94,16 @@ extension UberMapViewRepresentable {
             anno.coordinate = coordinate
             parent.mapView.addAnnotation(anno)
             parent.mapView.selectAnnotation(anno, animated: true)
-            parent.mapView.showAnnotations(parent.mapView.annotations, animated: true)
+
         }
         
         func configurePolyline(withDestinationCoordinate coordinate:CLLocationCoordinate2D) {
             guard let userLocationCoordinate = self.userLocationCoordinate else {return}
             getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
-               
+                let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
+                edgePadding:.init(top: 64, left: 32, bottom: 500, right: 32))
+                self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             }
         }
         

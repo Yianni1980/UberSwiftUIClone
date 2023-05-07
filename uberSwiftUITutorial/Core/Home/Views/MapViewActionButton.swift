@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MapViewActionButton: View {
     @Binding var mapState : MapViewState
+    @EnvironmentObject var viewModel: LocationSearchViewModel
     var body: some View {
         Button {
             withAnimation(.spring()) {
@@ -32,6 +33,8 @@ struct MapViewActionButton: View {
             print("DEBUG: No input")
         case .locationSelected:
             mapState = .noInput
+            viewModel.selectedLocationCoordinate = nil
+
         case .searchingForLocation:
             mapState = .noInput
         }
@@ -50,5 +53,7 @@ struct MapViewActionButton: View {
 struct MapViewActionButton_Previews: PreviewProvider {
     static var previews: some View {
         MapViewActionButton(mapState:.constant(.noInput))
+            .environmentObject(LocationSearchViewModel())
+            
     }
 }
