@@ -20,6 +20,7 @@
 		0B6C325329F9CEDE00715ACF /* LocationSearchRecultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C325229F9CEDE00715ACF /* LocationSearchRecultCell.swift */; };
 		0B7ECD762A084F4400481CD8 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7ECD752A084F4400481CD8 /* RideType.swift */; };
 		0BBFF96A2A01B0090010D495 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFF9692A01B0090010D495 /* MapViewState.swift */; };
+		0BC5F4D42A0AF865008B987B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F4D32A0AF865008B987B /* Double.swift */; };
 		0BF68E8729FB173800F10502 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF68E8629FB173800F10502 /* LocationSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		0B6C325229F9CEDE00715ACF /* LocationSearchRecultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchRecultCell.swift; sourceTree = "<group>"; };
 		0B7ECD752A084F4400481CD8 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		0BBFF9692A01B0090010D495 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
+		0BC5F4D32A0AF865008B987B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		0BF68E8629FB173800F10502 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 		0B6C323C29F7294A00715ACF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0BC5F4D32A0AF865008B987B /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				0B6C325129F9CC0000715ACF /* LocationSearchView.swift in Sources */,
 				0B6C324729F72D7300715ACF /* LocationManager.swift in Sources */,
 				0B30DD282A02F7590076CB9E /* RideRequestView.swift in Sources */,
+				0BC5F4D42A0AF865008B987B /* Double.swift in Sources */,
 				0BBFF96A2A01B0090010D495 /* MapViewState.swift in Sources */,
 				0B6C324F29F9CAD600715ACF /* MapViewActionButton.swift in Sources */,
 				0B6C322D29F7291400715ACF /* uberSwiftUITutorialApp.swift in Sources */,
