@@ -31,12 +31,14 @@ struct MapViewActionButton: View {
             
         case .noInput:
             print("DEBUG: No input")
-        case .locationSelected:
+        case .locationSelected,.polylineAdded:
             mapState = .noInput
-            viewModel.selectedLocationCoordinate = nil
+            viewModel.selectedUberLocation = nil
 
         case .searchingForLocation:
             mapState = .noInput
+       
+            
         }
     }
     func imageNameForState(_ state: MapViewState)->String {
@@ -44,8 +46,12 @@ struct MapViewActionButton: View {
             
         case .noInput:
             return "line.3.horizontal"
-        case .locationSelected,.searchingForLocation:
+        case .locationSelected,.searchingForLocation,.polylineAdded:
            return "arrow.left"
+            
+        default:
+            return "line.3.horizontal"
+
         }
     }
 }
