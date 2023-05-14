@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B1477212A0C41ED0012FBEA /* UberLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1477202A0C41ED0012FBEA /* UberLocation.swift */; };
+		0B2810942A117DFA00583D04 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2810932A117DFA00583D04 /* LoginView.swift */; };
+		0B2810962A117E1600583D04 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2810952A117E1600583D04 /* RegistrationView.swift */; };
 		0B30DD282A02F7590076CB9E /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DD272A02F7590076CB9E /* RideRequestView.swift */; };
 		0B6C322D29F7291400715ACF /* uberSwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C322C29F7291400715ACF /* uberSwiftUITutorialApp.swift */; };
 		0B6C323129F7291500715ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6C323029F7291500715ACF /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		0B1477202A0C41ED0012FBEA /* UberLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberLocation.swift; sourceTree = "<group>"; };
+		0B2810932A117DFA00583D04 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0B2810952A117E1600583D04 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		0B30DD272A02F7590076CB9E /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		0B6C322929F7291400715ACF /* uberSwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uberSwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B6C322C29F7291400715ACF /* uberSwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uberSwiftUITutorialApp.swift; sourceTree = "<group>"; };
@@ -58,6 +62,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2810902A117DAB00583D04 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0B2810922A117DCD00583D04 /* ViewModels */,
+				0B2810912A117DCC00583D04 /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		0B2810912A117DCC00583D04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B2810932A117DFA00583D04 /* LoginView.swift */,
+				0B2810952A117E1600583D04 /* RegistrationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B2810922A117DCD00583D04 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			path = "New Group/ViewModels";
+			sourceTree = "<group>";
+		};
 		0B30DD262A02F74A0076CB9E /* Trips */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +145,7 @@
 		0B6C323B29F7294600715ACF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0B2810902A117DAB00583D04 /* Authentication */,
 				0B30DD262A02F74A0076CB9E /* Trips */,
 				0B6C324929F9C90500715ACF /* LocationSearch */,
 				0B6C324829F9C8DC00715ACF /* Home */,
@@ -277,6 +308,7 @@
 				0B6C324729F72D7300715ACF /* LocationManager.swift in Sources */,
 				0B30DD282A02F7590076CB9E /* RideRequestView.swift in Sources */,
 				0BC5F4D42A0AF865008B987B /* Double.swift in Sources */,
+				0B2810962A117E1600583D04 /* RegistrationView.swift in Sources */,
 				0BBFF96A2A01B0090010D495 /* MapViewState.swift in Sources */,
 				0B6C324F29F9CAD600715ACF /* MapViewActionButton.swift in Sources */,
 				0B6C322D29F7291400715ACF /* uberSwiftUITutorialApp.swift in Sources */,
@@ -286,6 +318,7 @@
 				0B1477212A0C41ED0012FBEA /* UberLocation.swift in Sources */,
 				0B6C324D29F9C96100715ACF /* LocationSearchActivationView.swift in Sources */,
 				0B6C325329F9CEDE00715ACF /* LocationSearchRecultCell.swift in Sources */,
+				0B2810942A117DFA00583D04 /* LoginView.swift in Sources */,
 				0B7ECD762A084F4400481CD8 /* RideType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
