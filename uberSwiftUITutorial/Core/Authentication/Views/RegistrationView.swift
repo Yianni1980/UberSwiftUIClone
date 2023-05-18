@@ -12,6 +12,8 @@ struct RegistrationView: View {
     @State private var email = ""
     @State private var password = ""
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var viewModel:AuthViewModel
+    
     var body: some View {
         ZStack {
             Color(.black)
@@ -40,7 +42,7 @@ struct RegistrationView: View {
                     .padding(.leading)
                     Spacer()
                     Button {
-                        
+                        viewModel.registerUser(withEmail: email, password: password, fullname: fullname)
                     } label: {
                         HStack{
                             Text("SIGN UP")
@@ -65,5 +67,6 @@ struct RegistrationView: View {
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView()
+            .environmentObject(AuthViewModel())
     }
 }

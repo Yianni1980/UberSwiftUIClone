@@ -31,6 +31,7 @@
 		0BF108C52A15951500885AB0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF108C42A15951500885AB0 /* FirebaseFirestore */; };
 		0BF108C72A15951500885AB0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF108C62A15951500885AB0 /* FirebaseFirestoreSwift */; };
 		0BF108C92A15951500885AB0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF108C82A15951500885AB0 /* FirebaseStorage */; };
+		0BF108CB2A16C48E00885AB0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF108CA2A16C48E00885AB0 /* AuthViewModel.swift */; };
 		0BF68E8729FB173800F10502 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF68E8629FB173800F10502 /* LocationSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		0BC5F4D32A0AF865008B987B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		0BF108BD2A157BF400885AB0 /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		0BF108BF2A1593C100885AB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0BF108CA2A16C48E00885AB0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewModel.swift; path = uberSwiftUITutorial/ReusableItems/AuthViewModel.swift; sourceTree = SOURCE_ROOT; };
 		0BF68E8629FB173800F10502 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 		0B2810922A117DCD00583D04 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0BF108CA2A16C48E00885AB0 /* AuthViewModel.swift */,
 			);
 			name = ViewModels;
 			path = "New Group/ViewModels";
@@ -341,6 +344,7 @@
 				0B30DD282A02F7590076CB9E /* RideRequestView.swift in Sources */,
 				0BC5F4D42A0AF865008B987B /* Double.swift in Sources */,
 				0B2810962A117E1600583D04 /* RegistrationView.swift in Sources */,
+				0BF108CB2A16C48E00885AB0 /* AuthViewModel.swift in Sources */,
 				0BBFF96A2A01B0090010D495 /* MapViewState.swift in Sources */,
 				0B6C324F29F9CAD600715ACF /* MapViewActionButton.swift in Sources */,
 				0B6C322D29F7291400715ACF /* uberSwiftUITutorialApp.swift in Sources */,
