@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    private let user:User
+    init(user:User) {
+        self.user  = user
+    }
     var body: some View {
         VStack {
             List{
@@ -19,9 +24,9 @@ struct SettingsView: View {
                             .clipShape(Circle())
                             .frame(width: 64,height: 64)
                         VStack(alignment: .leading,spacing:8) {
-                            Text("Stephan Dowless")
+                            Text(user.fullname)
                                 .font(.system(size: 16,weight:.semibold))
-                            Text("test@gmail.com")
+                            Text(user.email)
                                 .font(.system(size: 14))
                                 .accentColor(Color.theme.primaryTextColor)
                                 .opacity(0.77)
@@ -32,6 +37,7 @@ struct SettingsView: View {
                             .font(.title2)
                             .foregroundColor(.gray)
                     }
+                    .padding(8)
                 }
                 
                 Section("Favorites") {
@@ -45,15 +51,23 @@ struct SettingsView: View {
                 }
                 Section("Account") {
                     SettingsRowView(imageName: "dollarsign.circle.fill", title: "Make Money Driving", tintColor: Color(.systemGreen))
-                    SettingsRowView(imageName: "arrow.left.circle.fill", title: "Payment Methods", tintColor: Color(.systemRed))
+                    SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign Out", tintColor: Color(.systemRed))
+                        .onTapGesture {
+                            viewModel.signOut()
+                        }
                 }
             }
         }
+        .navigationTitle("Settings")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        NavigationStack {
+            SettingsView(user: User(fullname: "John doe", email: "johndoe@gmail.com", uid: "1331311313"))
+                .environmentObject(AuthViewModel())
+        }
     }
 }

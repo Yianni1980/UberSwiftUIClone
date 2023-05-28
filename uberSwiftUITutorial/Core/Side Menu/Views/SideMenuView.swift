@@ -58,7 +58,16 @@ struct SideMenuView: View {
                     }
                 }
                 .navigationDestination(for: sideMenuOptionViewModel.self) { viewModel in
-                    Text(viewModel.title)
+                    switch viewModel {
+                    case .trips:
+                        Text("Trips")
+                    case .wallet:
+                        Text("Wallet")
+                    case .settings :
+                        SettingsView(user: user)
+                    case .messages :
+                        Text("Messages")
+                    }
                 }
                 Spacer()
                 
