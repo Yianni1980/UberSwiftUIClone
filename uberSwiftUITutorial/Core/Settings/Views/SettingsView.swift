@@ -41,8 +41,17 @@ struct SettingsView: View {
                 }
                 
                 Section("Favorites") {
-                    SavedLocationRowView(imageName: "house.circle.fill", title: "Home", subTitle: "Add Home")
-                    SavedLocationRowView(imageName: "archivebox.circle.fill", title: "Work", subTitle: "Add Work")
+                    ForEach(savedLocationViewModel.allCases) { viewModel  in
+                        NavigationLink {
+                            Text(viewModel.title)
+                        } label: {
+                            SavedLocationRowView(viewModel: viewModel)
+                        }
+
+                        
+                    }
+                    
+                   
                     
                 }
                 Section("Settings") {
