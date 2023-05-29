@@ -63,7 +63,7 @@ extension HomeView {
                     .ignoresSafeArea()
                 
                 if mapState == .searchingForLocation {
-                    LocationSearchView(mapState:$mapState)
+                    LocationSearchView()
                     
                 } else if mapState == .noInput {
                     LocationSearchActivationView()
@@ -91,6 +91,12 @@ extension HomeView {
             if let location = location{
                 viewmodel.userLocation = location
             }
+        }
+        .onReceive(viewmodel.$selectedUberLocation) { location  in
+            if location != nil {
+                self.mapState = .locationSelected
+            }
+            
         }
     }
 }
