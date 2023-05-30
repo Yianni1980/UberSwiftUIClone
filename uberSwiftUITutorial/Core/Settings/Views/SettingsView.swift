@@ -43,9 +43,9 @@ struct SettingsView: View {
                 Section("Favorites") {
                     ForEach(savedLocationViewModel.allCases) { viewModel  in
                         NavigationLink {
-                            SavedLocationSearchView()
+                            SavedLocationSearchView(config:viewModel)
                         } label: {
-                            SavedLocationRowView(viewModel: viewModel)
+                            SavedLocationRowView(viewModel: viewModel, user: user)
                         }
 
                         
