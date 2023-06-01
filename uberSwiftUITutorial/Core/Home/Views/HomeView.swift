@@ -12,6 +12,7 @@ struct HomeView: View {
     @State private var showSideMenu = false
     @EnvironmentObject var viewmodel: LocationSearchViewModel
     @EnvironmentObject var authViewmodel: AuthViewModel
+    @EnvironmentObject var homeViewModel : HomeViewModel
     
     var body: some View {
         Group {

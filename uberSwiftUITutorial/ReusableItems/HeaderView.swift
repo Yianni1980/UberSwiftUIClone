@@ -30,6 +30,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(user: User(fullname: "John doe", email: "johndoe@gmail.com", uid: "1331311313"))
+        HeaderView(user:dev.mockUser)
     }
 }

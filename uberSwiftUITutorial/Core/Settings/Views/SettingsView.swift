@@ -75,8 +75,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            SettingsView(user: User(fullname: "John doe", email: "johndoe@gmail.com", uid: "1331311313"))
-                .environmentObject(AuthViewModel())
+            SettingsView(user: dev.mockUser)
         }
     }
 }

@@ -45,6 +45,9 @@
 		0BF108C02A1593C100885AB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BF108BF2A1593C100885AB0 /* GoogleService-Info.plist */; };
 		0BF108CB2A16C48E00885AB0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF108CA2A16C48E00885AB0 /* AuthViewModel.swift */; };
 		0BF68E8729FB173800F10502 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF68E8629FB173800F10502 /* LocationSearchViewModel.swift */; };
+		0BFCB46F2A2802F3009A9989 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFCB46E2A2802F3009A9989 /* DeveloperPreview.swift */; };
+		0BFCB4712A29372C009A9989 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFCB4702A29372C009A9989 /* HomeViewModel.swift */; };
+		0BFCB4732A2943EA009A9989 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFCB4722A2943EA009A9989 /* DriverAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +86,9 @@
 		0BF108BF2A1593C100885AB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0BF108CA2A16C48E00885AB0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewModel.swift; path = uberSwiftUITutorial/Core/Authentication/ViewModels/AuthViewModel.swift; sourceTree = SOURCE_ROOT; };
 		0BF68E8629FB173800F10502 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		0BFCB46E2A2802F3009A9989 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
+		0BFCB4702A29372C009A9989 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0BFCB4722A2943EA009A9989 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		0B2F31EA2A22BE47005D2E4B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0BFCB4702A29372C009A9989 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 			children = (
 				0BC5F4D32A0AF865008B987B /* Double.swift */,
 				0BB5D7C92A0C4B64007470E1 /* Color.swift */,
+				0BFCB46E2A2802F3009A9989 /* DeveloperPreview.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 				0B1477202A0C41ED0012FBEA /* UberLocation.swift */,
 				0B70D3562A1825FD00F566DE /* User.swift */,
 				0B17A8992A26953B0067289E /* SavedLocation.swift */,
+				0BFCB4722A2943EA009A9989 /* DriverAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -430,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF68E8729FB173800F10502 /* LocationSearchViewModel.swift in Sources */,
+				0BFCB4712A29372C009A9989 /* HomeViewModel.swift in Sources */,
 				0B6C325129F9CC0000715ACF /* LocationSearchView.swift in Sources */,
 				0B6C324729F72D7300715ACF /* LocationManager.swift in Sources */,
 				0BE5B75D2A1988B100B7AAF4 /* SideMenuOptionViewModel.swift in Sources */,
@@ -448,12 +458,14 @@
 				0BE5B75F2A198A8300B7AAF4 /* SideMenuOptionView.swift in Sources */,
 				0B2F31F12A22C292005D2E4B /* HeaderView.swift in Sources */,
 				0B6C324529F72A3900715ACF /* UberMapViewRepresentable.swift in Sources */,
+				0BFCB4732A2943EA009A9989 /* DriverAnnotation.swift in Sources */,
 				0B6C324229F729C300715ACF /* HomeView.swift in Sources */,
 				0B1477212A0C41ED0012FBEA /* UberLocation.swift in Sources */,
 				0B17A8982A2559910067289E /* LocationSearchResultsView.swift in Sources */,
 				0BE5B75B2A197F9600B7AAF4 /* SideMenuView.swift in Sources */,
 				0B2F31F32A22C62C005D2E4B /* SavedLocationRowView.swift in Sources */,
 				0B6C324D29F9C96100715ACF /* LocationSearchActivationView.swift in Sources */,
+				0BFCB46F2A2802F3009A9989 /* DeveloperPreview.swift in Sources */,
 				0B6C325329F9CEDE00715ACF /* LocationSearchRecultCell.swift in Sources */,
 				0B2810942A117DFA00583D04 /* LoginView.swift in Sources */,
 				0BF108BE2A157BF400885AB0 /* CustomInputField.swift in Sources */,
