@@ -8,11 +8,17 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import Combine
 
 class HomeViewModel:ObservableObject {
     @Published var drivers = [User]()
+    private var cancellables = Set<AnyCancellable>()
+    private let service = UserService.shared
+    
+    
     init() {
-        fetchDrivers()
+        
+        fetchUser()
     }
     
     func fetchDrivers(){
@@ -23,4 +29,19 @@ class HomeViewModel:ObservableObject {
                 self.drivers = drivers
             }
     }
+    
+    func fetchUser() {
+        service.$user
+        
+            .sink { user in
+                guard let user = user else {return}
+                guard user.accountType == .passenger else {return}
+                self.fetchDrivers()
+            }
+            .store(in: &cancellables)
+    }
+    
+    
+    
+    
 }
