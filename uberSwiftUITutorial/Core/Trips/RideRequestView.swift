@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RideRequestView: View {
     @State private var selectedRideType: RideType = .uberX
-    @EnvironmentObject var locationViewModel: LocationSearchViewModel
+    @EnvironmentObject var homeViewModel: HomeViewModel
     var body: some View {
         VStack {
             Capsule()
@@ -40,19 +40,19 @@ struct RideRequestView: View {
                             .font(.system(size: 16,weight: .semibold))
                             .foregroundColor(.gray)
                         Spacer()
-                        Text(locationViewModel.pickupTime ?? "")
+                        Text(homeViewModel.pickupTime ?? "")
                             .font(.system(size: 14,weight: .semibold))
                             .foregroundColor(.gray)
                         
                     }
                     .padding(.bottom,10)
                     HStack {
-                        if let location = locationViewModel.selectedUberLocation {
+                        if let location = homeViewModel.selectedUberLocation {
                             Text(location.title)
                                 .font(.system(size: 16,weight: .semibold))
                         }
                         Spacer()
-                        Text(locationViewModel.dropOffTime ?? "")
+                        Text(homeViewModel.dropOffTime ?? "")
                             .font(.system(size: 14,weight: .semibold))
                             .foregroundColor(.gray)
                         
@@ -84,7 +84,7 @@ struct RideRequestView: View {
                             VStack(alignment:.leading,spacing:4) {
                                 Text(type.description)
                                     .font(.system(size: 14,weight: .semibold))
-                                Text(locationViewModel.computRidePrice(forType: type).toCurrency())
+                                Text(homeViewModel.computRidePrice(forType: type).toCurrency())
                                     .font(.system(size: 14,weight: .semibold))
                                     
                             }
@@ -136,7 +136,7 @@ struct RideRequestView: View {
             
             //request ride button
             Button{
-                
+                homeViewModel.requestTrip()
             }label: {
                 Text("CONFIRM RIDE")
                     .fontWeight(.bold)
@@ -156,6 +156,6 @@ struct RideRequestView: View {
 
 struct RideRequestView_Previews: PreviewProvider {
     static var previews: some View {
-        RideRequestView()            .environmentObject(LocationSearchViewModel())
+        RideRequestView()            .environmentObject(HomeViewModel())
     }
 }
